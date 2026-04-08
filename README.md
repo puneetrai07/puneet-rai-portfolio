@@ -1,10 +1,12 @@
-# Puneet Rai — Backend Systems Portfolio
+# Puneet Rai — Backend Systems Engineer
 
-An interactive portfolio showcasing my experience building distributed financial systems, focusing on reliability, consistency, and real-world scale.
+Built systems processing **10M+ financial events/year** at **120–150 TPS**.
 
-## 🌐 Live Portfolio
+An interactive portfolio showcasing real-world distributed systems, focusing on reliability, consistency, and production-grade engineering.
 
-👉 [https://puneet-rai-portfolio.vercel.app/](https://puneet-rai-portfolio.vercel.app/)
+👉 Live: [https://puneet-rai-portfolio.vercel.app/](https://puneet-rai-portfolio.vercel.app/)
+
+
 
 ---
 
