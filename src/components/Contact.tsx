@@ -17,18 +17,19 @@ const Contact = () => {
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Button variant="vault" size="lg" asChild>
-            <a href="mailto:your.email@example.com">
+            <a href="mailto:puneetatwork07@gmail.com">
               <Mail className="w-4 h-4 mr-2" />
               Contact Me
             </a>
           </Button>
           <Button variant="system" size="lg" asChild>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/puneetrai07/" target="_blank" rel="noopener noreferrer">
               <Linkedin className="w-4 h-4 mr-2" />
               LinkedIn
             </a>
           </Button>
-          <Button variant="system" size="lg">
+          <Button variant="system" size="lg" asChild>
+            <a href="/resume.pdf" target="_blank">
             <Download className="w-4 h-4 mr-2" />
             Resume
           </Button>
