@@ -2,17 +2,17 @@ import { User, Music, Clapperboard, BookOpen } from "lucide-react";
 
 const About = () => {
   const interests = [
-    { icon: User, label: "Skating", note: "Clearing my head on wheels" },
-    { icon: Music, label: "Drums", note: "Keeping the beat alive" },
-    { icon: BookOpen, label: "Fiction", note: "Sci-fi & fantasy worlds" },
-    { icon: Clapperboard, label: "Zombie Shows", note: "The Walking Dead era" },
+    { icon: User, label: "Skating", note: "How I decompress" },
+    { icon: Music, label: "Drums", note: "Enthusiastic, not great" },
+    { icon: BookOpen, label: "Fiction", note: "Sci-fi & fantasy" },
+    { icon: Clapperboard, label: "Zombie Shows", note: "No apologies" },
   ];
 
   return (
     <section id="about" className="section-container">
       <div className="text-center mb-16">
         <p className="font-mono text-xs text-accent tracking-widest uppercase mb-3">
-          Behind The System
+          The Person
         </p>
         <h2 className="text-3xl sm:text-4xl font-bold mb-4">About</h2>
       </div>
@@ -20,14 +20,14 @@ const About = () => {
       <div className="max-w-3xl mx-auto">
         <div className="vault-card mb-8">
           <p className="text-muted-foreground leading-relaxed text-lg">
-            I'm a backend engineer who genuinely cares about the systems I build.
-            I think about edge cases at 2AM, get excited about clean architecture,
-            and believe that reliable software is a craft — not just a job.
+            I'm a backend engineer who finds genuine satisfaction in well-designed systems.
+            I like thinking about failure modes, writing code that handles edge cases gracefully,
+            and building things that other engineers can maintain without needing me in the room.
           </p>
           <p className="text-muted-foreground leading-relaxed text-lg mt-4">
-            When I'm not engineering systems, I'm probably skating around the city,
-            playing drums badly but enthusiastically, reading some epic fantasy novel,
-            or debating which season of a zombie show jumped the shark.
+            Outside of work — skating, drumming (badly, with conviction), reading whatever
+            Brandon Sanderson just published, and arguing about which zombie show actually
+            stuck the landing.
           </p>
         </div>
 

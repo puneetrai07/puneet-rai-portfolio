@@ -7,7 +7,7 @@ const nodes = [
     label: "Vault",
     subtitle: "Funds Reservation",
     icon: Database,
-    description: "Real-time funds reservation system handling 10M+ events/year. Prevents double spending and NSF errors with sub-50ms latency.",
+    description: "Real-time funds reservation with pessimistic locking and idempotent operations. Handles 10M+ events/year with sub-50ms lock hold times. Scroll down to the case study for a deep dive.",
     x: 50,
     y: 20,
     color: "primary" as const,
@@ -15,9 +15,9 @@ const nodes = [
   {
     id: "messaging",
     label: "Messaging Layer",
-    subtitle: "Event-Driven Architecture",
+    subtitle: "IBM MQ",
     icon: MessageSquare,
-    description: "IBM MQ-based messaging backbone enabling async processing, guaranteed delivery, and decoupled microservice communication.",
+    description: "Asynchronous event backbone using IBM MQ. Decouples reservation from settlement, handles guaranteed delivery, dead-letter routing, and retry policies across services.",
     x: 20,
     y: 45,
     color: "accent" as const,
@@ -27,27 +27,27 @@ const nodes = [
     label: "API Layer",
     subtitle: "REST Services",
     icon: Globe,
-    description: "RESTful API gateway handling onboarding flows, account management, and cross-service orchestration with contract-first design.",
+    description: "Contract-first REST APIs serving onboarding, account management, and cross-service orchestration. Versioned endpoints with backward-compatibility guarantees.",
     x: 80,
     y: 45,
     color: "accent" as const,
   },
   {
     id: "security",
-    label: "Security Layer",
-    subtitle: "JWT Authentication",
+    label: "Security",
+    subtitle: "JWT + OAuth 2.0",
     icon: Shield,
-    description: "Token-based auth with JWT, role-based access control, and secure credential management across distributed services.",
+    description: "Token-based authentication with JWT across microservices. Integrated with centralized identity provider via OAuth 2.0. Role-based access control on all API endpoints.",
     x: 15,
     y: 72,
     color: "primary" as const,
   },
   {
     id: "processing",
-    label: "Processing Engine",
-    subtitle: "Spring Batch Pipelines",
+    label: "Batch Processing",
+    subtitle: "Spring Batch",
     icon: Cpu,
-    description: "Batch processing pipelines handling bulk operations, scheduled jobs, and data transformations at scale.",
+    description: "Nightly reconciliation jobs comparing reservation records against settlement ledgers. Flags discrepancies automatically and generates exception reports for operations.",
     x: 50,
     y: 72,
     color: "accent" as const,
@@ -55,9 +55,9 @@ const nodes = [
   {
     id: "observability",
     label: "Observability",
-    subtitle: "Splunk Dashboards",
+    subtitle: "Splunk + Metrics",
     icon: Eye,
-    description: "Full-stack observability with custom Splunk dashboards, alerting, and distributed tracing across all services.",
+    description: "Custom Splunk dashboards tracking reservation latency, MQ queue depth, error rates, and settlement lag. Primary on-call tool for the team during production incidents.",
     x: 85,
     y: 72,
     color: "primary" as const,
@@ -65,9 +65,9 @@ const nodes = [
   {
     id: "deployment",
     label: "Deployment",
-    subtitle: "CI/CD Pipeline",
+    subtitle: "CI/CD + Blue-Green",
     icon: Rocket,
-    description: "Zero-downtime deployments with automated CI/CD, blue-green strategies, and infrastructure-as-code.",
+    description: "Automated CI/CD pipeline with blue-green deployments and smoke tests. Reduced rollback incidents by ~60% after introducing automated pre-production validation.",
     x: 50,
     y: 95,
     color: "accent" as const,
@@ -94,11 +94,11 @@ const SystemMap = () => {
     <section id="system-map" className="section-container">
       <div className="text-center mb-16">
         <p className="font-mono text-xs text-primary tracking-widest uppercase mb-3">
-          System Architecture
+          Architecture Overview
         </p>
         <h2 className="text-3xl sm:text-4xl font-bold mb-4">System Map</h2>
         <p className="text-muted-foreground max-w-lg mx-auto">
-          Click on any node to explore the engineering behind each component.
+          The components I've built and maintained in production. Click any node to learn more.
         </p>
       </div>
 

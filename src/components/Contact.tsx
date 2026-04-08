@@ -6,14 +6,13 @@ const Contact = () => {
     <section id="contact" className="section-container">
       <div className="max-w-2xl mx-auto text-center">
         <p className="font-mono text-xs text-primary tracking-widest uppercase mb-3">
-          Establish Connection
+          Get In Touch
         </p>
         <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-          Let's Build Something{" "}
-          <span className="text-primary text-glow-gold">Reliable</span>
+          Let's Talk Systems
         </h2>
         <p className="text-muted-foreground mb-10 max-w-md mx-auto">
-          Looking for a backend engineer who takes ownership and builds systems that last? Let's talk.
+          Looking for a backend engineer who takes ownership of what they build? I'd like to hear about the problem you're solving.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -38,9 +37,7 @@ const Contact = () => {
         {/* Footer */}
         <div className="mt-20 pt-8 border-t border-border">
           <p className="font-mono text-xs text-muted-foreground">
-            System Status: <span className="text-accent">All services operational</span>
-            <span className="mx-3">·</span>
-            Built with precision
+            Built with React + TypeScript
           </p>
         </div>
       </div>

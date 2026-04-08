@@ -2,20 +2,20 @@ import { Building2, Calendar, ArrowRight } from "lucide-react";
 
 const Experience = () => {
   const highlights = [
-    "Designed and built a real-time funds reservation system processing 10M+ events/year",
-    "Architected event-driven flows using IBM MQ for inter-service communication",
-    "Built RESTful onboarding APIs serving multiple downstream consumers",
-    "Implemented JWT-based authentication across distributed microservices",
-    "Created Spring Batch pipelines for high-volume data processing",
-    "Built Splunk dashboards for production observability and incident response",
-    "Drove CI/CD improvements enabling zero-downtime deployments",
+    "Owned the funds reservation system end-to-end — designed the locking strategy, built the service, wrote the runbooks, and supported it in production across 10M+ annual events.",
+    "Built the event-driven messaging layer on IBM MQ that decouples reservation from settlement, enabling async processing with guaranteed delivery and dead-letter handling.",
+    "Designed and shipped RESTful APIs for customer onboarding, consumed by three downstream teams. Defined contracts, versioning strategy, and backward-compatibility guarantees.",
+    "Implemented JWT-based authentication across multiple microservices, including token rotation, scope validation, and integration with the bank's centralized identity provider.",
+    "Built Spring Batch jobs for nightly reconciliation — comparing reservation records against settlement ledgers to catch and flag discrepancies automatically.",
+    "Created Splunk dashboards tracking reservation latency, MQ queue depth, error rates, and settlement lag. These dashboards became the team's primary on-call tool.",
+    "Reduced deployment risk by introducing blue-green deployment patterns and automated smoke tests, cutting rollback incidents by roughly 60%.",
   ];
 
   return (
     <section id="experience" className="section-container">
       <div className="text-center mb-16">
         <p className="font-mono text-xs text-primary tracking-widest uppercase mb-3">
-          Service Record
+          Production Experience
         </p>
         <h2 className="text-3xl sm:text-4xl font-bold mb-4">Experience</h2>
       </div>
@@ -29,7 +29,7 @@ const Experience = () => {
               </div>
               <div>
                 <h3 className="font-bold text-lg">Backend Software Engineer</h3>
-                <p className="text-muted-foreground text-sm">Bank of New York (BNY)</p>
+                <p className="text-muted-foreground text-sm">BNY (Bank of New York Mellon)</p>
               </div>
             </div>
             <div className="flex items-center gap-2 text-muted-foreground text-sm">
@@ -38,11 +38,17 @@ const Experience = () => {
             </div>
           </div>
 
-          <div className="space-y-3">
+          <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
+            Worked on core banking infrastructure — the systems that move and protect money.
+            My role centered on building reliable backend services in a distributed Java environment,
+            with a focus on funds management, messaging, and observability.
+          </p>
+
+          <div className="space-y-4">
             {highlights.map((item, i) => (
               <div key={i} className="flex items-start gap-3 group">
-                <ArrowRight className="w-4 h-4 text-accent mt-0.5 flex-shrink-0 opacity-50 group-hover:opacity-100 transition-opacity" />
-                <p className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">
+                <ArrowRight className="w-4 h-4 text-accent mt-1 flex-shrink-0 opacity-50 group-hover:opacity-100 transition-opacity" />
+                <p className="text-sm text-muted-foreground group-hover:text-foreground transition-colors leading-relaxed">
                   {item}
                 </p>
               </div>
