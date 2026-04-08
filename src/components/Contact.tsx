@@ -32,6 +32,7 @@ const Contact = () => {
             <a href="/resume.pdf" target="_blank">
             <Download className="w-4 h-4 mr-2" />
             Resume
+            </a>
           </Button>
         </div>
 
