@@ -28,6 +28,17 @@ const Contact = () => {
               LinkedIn
             </a>
           </Button>
+
+          <Button variant="system" size="lg" asChild>
+  <a 
+    href="https://github.com/puneetrai07" 
+    target="_blank" 
+    rel="noopener noreferrer"
+  >
+    GitHub
+  </a>
+</Button>
+          
           <Button variant="system" size="lg" asChild>
             <a href="/resume.pdf" target="_blank">
             <Download className="w-4 h-4 mr-2" />
