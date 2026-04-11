@@ -2,23 +2,33 @@ import { Brain, Gamepad2, BarChart3, ExternalLink } from "lucide-react";
 
 const projects = [
   {
-    title: "Sudoku Solver",
-    description: "Backtracking algorithm with constraint propagation. Demonstrates DSA thinking and recursive problem solving.",
-    icon: Brain,
-    tags: ["Algorithm", "Java", "Recursion"],
-  },
-  {
-    title: "Snake Game",
-    description: "Classic snake game built from scratch. Clean game loop, collision detection, and state management.",
-    icon: Gamepad2,
-    tags: ["JavaScript", "Canvas", "Game Dev"],
-  },
-  {
-    title: "Spotify Analysis",
-    description: "Data pipeline analyzing listening patterns. ETL processing, visualization, and insight generation from Spotify API data.",
+    title: "Car Dekho Backend System",
+    description: "Designed backend system for car discovery with filtering, query optimization, and scalable API design.",
     icon: BarChart3,
-    tags: ["Python", "Data", "API"],
+    tags: ["Java", "Backend", "API"],
+    link: "https://github.com/puneetrai07/Car-Dekho"
   },
+  {
+    title: "Incident Copilot (AI)",
+    description: "AI-powered system to analyze logs and generate root cause, impact, and resolution insights for backend incidents.",
+    icon: Brain,
+    tags: ["AI", "Distributed Systems", "LLM"],
+    link: "https://github.com/puneetrai07/incident-copilot"
+  },
+  {
+    title: "Spotify Data Analysis",
+    description: "Analyzed large-scale music data using Python to extract listening patterns, trends, and actionable insights.",
+    icon: BarChart3,
+    tags: ["Python", "Data Analysis", "ETL"],
+    link: "https://github.com/puneetrai07/Spotify-Data-Analysis"
+  },
+  {
+    title: "Sudoku Solver",
+    description: "Implemented constraint-based backtracking algorithm to efficiently solve Sudoku puzzles.",
+    icon: Gamepad2,
+    tags: ["DSA", "Algorithms"],
+    link: "https://github.com/puneetrai07/Sudoku-Solver"
+  }
 ];
 
 const Projects = () => {
@@ -35,18 +45,31 @@ const Projects = () => {
         {projects.map((project) => {
           const Icon = project.icon;
           return (
-            <div key={project.title} className="vault-card group cursor-pointer">
+            <a
+              key={project.title}
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="vault-card group block"
+            >
               <div className="flex items-center justify-between mb-4">
                 <div className="p-2 rounded-md bg-muted">
                   <Icon className="w-5 h-5 text-primary" />
                 </div>
                 <ExternalLink className="w-4 h-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
+
               <h3 className="font-bold mb-2">{project.title}</h3>
+
               <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
                 {project.description}
               </p>
-              <div className="flex flex-wrap gap-2">
+
+              <p className="text-xs text-primary mt-2 opacity-80 group-hover:opacity-100">
+                View Project →
+              </p>
+
+              <div className="flex flex-wrap gap-2 mt-3">
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
@@ -56,7 +79,7 @@ const Projects = () => {
                   </span>
                 ))}
               </div>
-            </div>
+            </a>
           );
         })}
       </div>
